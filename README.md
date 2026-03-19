@@ -47,7 +47,7 @@ Skill-Bridge is an AI-powered Career Navigator designed to bridge the gap betwee
 ## Architecture & Design Tradeoffs 
 ### Key Higlights of MVP:
 - **Stateless vs. Stateful:** The MVP uses Streamlit's session_state to manage the UI dashboard without requiring a database. This prioritizes speed of delivery and core logic testing over complex authentication routing.
-- **Data Safety (No Scraping): ** Adhering to prompt constraints, live job boards were not scraped. A synthetic data generator (generate_data.py) creates realistic job profiles.
+- **Data Safety (No Scraping):** Adhering to prompt constraints, live job boards were not scraped. A synthetic data generator (generate_data.py) creates realistic job profiles.
 - **Memory Management:-** Resume PDFs are processed entirely in memory via pypdf. In a production environment, strict pre-processing (5MB limit, <5 pages) and virus scanning would be implemented to protect server RAM and optimize LLM token usage.
 
 ## Phase 2: Future Enhancements 
