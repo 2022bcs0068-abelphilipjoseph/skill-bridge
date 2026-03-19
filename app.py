@@ -142,7 +142,7 @@ if st.session_state.analysis_result:
         st.markdown("### ⚠️ Missing Skills")
         for skill in result.get("missing_skills", []): st.error(f"❌ {skill}")
 
-    # --- THE NEW PERSONALIZED SKILL TRACKER ---
+    # --- PERSONALIZED SKILL TRACKER ---
     if result.get("missing_skills"):
         st.divider()
         st.subheader("📈 Personal Skill Progress Tracker")
@@ -150,7 +150,7 @@ if st.session_state.analysis_result:
         
         track_col1, track_col2 = st.columns(2)
         for i, skill in enumerate(result["missing_skills"]):
-            # Split items between two columns for a clean look
+            
             target_col = track_col1 if i % 2 == 0 else track_col2
             with target_col:
                 # Update session state dynamically when user changes the dropdown
@@ -169,7 +169,7 @@ if st.session_state.analysis_result:
         skill_name = item.get('missing_skill', 'Unknown')
         current_status = st.session_state.skill_progress.get(skill_name, "Yet to Start")
         
-        # Visually change the card if they mark it as Skilled!
+        
         border_color = "green" if current_status in ["Skilled", "Highly Skilled"] else "gray"
         
         with st.container(border=True):
@@ -180,7 +180,7 @@ if st.session_state.analysis_result:
                 st.markdown(f"[Search {skill_name} on Coursera](https://www.coursera.org/search?query={sq})")
                 st.markdown(f"[Search {skill_name} on YouTube](https://www.youtube.com/results?search_query={sq}+tutorial)")
 
-    # --- THE FIXED QUIZ MASTER ---
+    # --- QUIZ MASTER ---
     st.divider()
     st.subheader("🎤 Quiz Master")
     if result.get("matched_skills"):
