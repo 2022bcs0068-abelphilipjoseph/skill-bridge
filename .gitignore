@@ -1,0 +1,8 @@
+.env
+basic_app.py
+without_state_app.py
+venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+
