@@ -1,5 +1,6 @@
 # 🎓 Skill-Bridge: Career Navigator MVP
 
+
 ## Overview
 Skill-Bridge is an AI-powered Career Navigator designed to bridge the gap between a candidate's current skills and their target role. Built for the 4-6 hour MVP constraint, it features real-time resume parsing, AI-driven gap analysis, personalized learning roadmaps, and a gamified mock-interview module.
 
@@ -13,7 +14,7 @@ Skill-Bridge is an AI-powered Career Navigator designed to bridge the gap betwee
 ## Quick Start Guide
 1. **Clone & Setup:**
    ```bash
-   git clone <your-repo-link>
+   git clone https://github.com/2022bcs0068-abelphilipjoseph/skill-bridge
    cd skill-bridge
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -34,25 +35,25 @@ Skill-Bridge is an AI-powered Career Navigator designed to bridge the gap betwee
 
 
 4. Run the App:
-  ```bash
-  streamlit run app.py
-  ```
+   ```bash
+   streamlit run app.py
+   ```
 
 5. Run Tests:
-  ```bash
-  pytest test_app.py
-  ```
+   ```bash
+   pytest test_app.py
+   ```
 
 ## Architecture & Design Tradeoffs 
-###Key Higlights of MVP:
+### Key Higlights of MVP:
 - **Stateless vs. Stateful:** The MVP uses Streamlit's session_state to manage the UI dashboard without requiring a database. This prioritizes speed of delivery and core logic testing over complex authentication routing.
 - **Data Safety (No Scraping): ** Adhering to prompt constraints, live job boards were not scraped. A synthetic data generator (generate_data.py) creates realistic job profiles.
 - **Memory Management:-** Resume PDFs are processed entirely in memory via pypdf. In a production environment, strict pre-processing (5MB limit, <5 pages) and virus scanning would be implemented to protect server RAM and optimize LLM token usage.
 
 ## Phase 2: Future Enhancements 
 
-- **Firebase Authentication: ** Implementing a secure login wall so users have a persistent "Skills Profile".
-- **Firestore NoSQL Database: ** Migrating away from stateless sessions. The app would push/pull the user's generated learning roadmap and skill statuses (Basic -> Highly Skilled) to a database, tracking their journey over months.
+- **Firebase Authentication:** Implementing a secure login wall so users have a persistent "Skills Profile".
+- **Firestore NoSQL Database:** Migrating away from stateless sessions. The app would push/pull the user's generated learning roadmap and skill statuses (Basic -> Highly Skilled) to a database, tracking their journey over months.
 - **Interactive Gamified Quizzer:** Upgrading the single Mock Interview question into a dynamic, endless batch quiz generator with score tracking to rigorously test verified skills.
 
 
