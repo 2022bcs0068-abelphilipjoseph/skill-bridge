@@ -4,7 +4,10 @@
 ## Overview
 Skill-Bridge is an AI-powered Career Navigator designed to bridge the gap between a candidate's current skills and their target role. Built for MVP constraint, it features real-time resume parsing, AI-driven gap analysis, personalized learning roadmaps, and a gamified mock-interview module.
 
-**Demo Youtube Link:** https://youtu.be/gNy1LhzB8sQ[https://youtu.be/gNy1LhzB8sQ]
+**Demo YouTube Link:** [Watch the MVP Demo Here](https://youtu.be/gNy1LhzB8sQ)
+
+### Application Architecture
+![Architecture Diagram](./architecture.png)
 
 ## Core Features
 - **In-Memory Resume Parsing:** Extracts text from PDF/TXT files dynamically without writing to disk, ensuring zero PII leakage.
